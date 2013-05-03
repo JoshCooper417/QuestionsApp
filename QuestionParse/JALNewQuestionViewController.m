@@ -14,17 +14,6 @@
 
 @implementation JALNewQuestionViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    
-    
-    
-    return self;
-}
 
 -(void)dismissKeyboard {
     [self.questionTextField resignFirstResponder];
@@ -50,6 +39,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    // set up text delegates to resign keyboard
     self.questionTextField.delegate = self;
     self.answer1TextField.delegate = self;
     self.answer2TextField.delegate = self;
@@ -62,6 +52,25 @@
     
     [self.view addGestureRecognizer:tap];
     [tap setCancelsTouchesInView:NO];
+    
+    // Adjust UI elements
+        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
+    
+    [self.postButton setBackgroundImage:[UIImage imageNamed: @"postbutton.png"] forState:UIControlStateNormal];
+    
+    [self.postButton setBackgroundImage:[UIImage imageNamed: @"postbutton.png"] forState:UIControlStateHighlighted];
+    
+    
+    [self.cancelButton setBackgroundImage:[UIImage imageNamed: @"cancelbutton.png"] forState:UIControlStateNormal];
+    
+    [self.cancelButton setBackgroundImage:[UIImage imageNamed: @"cancelbutton.png"] forState:UIControlStateHighlighted];
+    
+    self.questionLabel.font = [UIFont fontWithName:@"Avenir" size:22];
+    
+     self.answer1Label.font = [UIFont fontWithName:@"Avenir" size:18];
+     self.answer2Label.font = [UIFont fontWithName:@"Avenir" size:18];
+     self.answer3Label.font = [UIFont fontWithName:@"Avenir" size:18];
+     self.answer4Label.font = [UIFont fontWithName:@"Avenir" size:18];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,12 +80,16 @@
 }
 
 
+
 - (IBAction)addButton:(id)sender {
+    
+    // post a new question to the Parse data model
     PFObject* newquestion = [[PFObject alloc]initWithClassName:@"Question"];
     NSString* answer1 = _answer1TextField.text;
     NSString* answer2 = _answer2TextField.text;
     NSString* answer3 = _answer3TextField.text;
     NSString* answer4 = _answer4TextField.text;
+    
     //Initial has the textfield inputs, which are possibly null. We put the non-null ones into Final, which we send to Parse.
 
     NSArray* answersInitial = [[NSArray alloc] initWithObjects:answer1,answer2, answer3, answer4, nil];
@@ -89,6 +102,7 @@
         }
     }
     
+    // check that input is valid
     NSString* newquestionString = _questionTextField.text;
     if([answersFinal count]==0 || newquestionString.length ==0){
             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Uh oh"
@@ -98,8 +112,7 @@
                                                     otherButtonTitles:nil];
             [message show];
     }
-    else{
-   
+    else {
     [newquestion setObject: answersFinal forKey:@"answerOptions"];
     PFObject* user = [PFUser currentUser];
     [user fetch];
@@ -112,6 +125,10 @@
     [user saveInBackground];
     [self dismissViewControllerAnimated: YES completion: nil];
     }
+}
+
+- (IBAction)cancelButton:(id)sender {
+      [self dismissViewControllerAnimated: YES completion: nil];
 }
 
 

@@ -14,5 +14,6 @@
 
 - (IBAction)goBackButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *answers;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property(weak,nonatomic) PFObject* currquestion;
 @end

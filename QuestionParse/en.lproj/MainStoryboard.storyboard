@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="2" customClass="JALFeedViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -23,12 +23,15 @@
             <objects>
                 <viewController storyboardIdentifier="detailView" id="YHr-yb-Vjk" customClass="JALQuestionDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="detailView" id="ncI-3x-AcZ">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fR-Jf-zH1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="eJl-bB-Q1B"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Go Back">
+                                <state key="normal">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -54,6 +57,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="0fR-Jf-zH1" id="1zR-I8-gvV"/>
                         <outlet property="questionLabel" destination="yCV-Df-gYL" id="rVa-eY-Uzr"/>
                     </connections>
                 </viewController>
@@ -66,22 +70,22 @@
             <objects>
                 <viewController storyboardIdentifier="newQuestion" id="ToF-Qf-DcQ" customClass="JALNewQuestionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nY9-69-9kU">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your question here!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LEu-TF-9Yp">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="290" id="APN-9P-vXc"/>
+                                    <constraint firstAttribute="width" constant="199" id="rr3-NL-WHx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fg-Wt-i38">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="179" id="hD3-av-z9d"/>
+                                    <constraint firstAttribute="width" constant="91" id="MNl-Oc-Ut3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Post Question">
+                                <state key="normal">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -93,9 +97,6 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer 1..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCV-2g-G55">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="199" id="PkD-az-zmv"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -111,31 +112,92 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZK-GJ-DHD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="JkJ-22-Wmz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="ToF-Qf-DcQ" eventType="touchUpInside" id="tZx-0c-LkD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="New Question:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcb-YH-mlS">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Answer 1 Option:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0u-4A-VxQ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Answer 2 Option:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="575-sC-Vq6">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Answer 3 Option:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfu-bg-XwO">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Answer 4 Option:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBJ-or-AX2">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oBt-5q-RhH" firstAttribute="trailing" secondItem="MQl-xL-JdD" secondAttribute="trailing" type="default" id="26q-Rm-XK5"/>
-                            <constraint firstItem="oCV-2g-G55" firstAttribute="leading" secondItem="nY9-69-9kU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="49A-lb-NtR"/>
-                            <constraint firstItem="MQl-xL-JdD" firstAttribute="leading" secondItem="nY9-69-9kU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8eh-0e-6jO"/>
-                            <constraint firstItem="MQl-xL-JdD" firstAttribute="top" secondItem="nY9-69-9kU" secondAttribute="top" constant="215" id="BhT-HE-9IU"/>
-                            <constraint firstItem="1fg-Wt-i38" firstAttribute="centerX" secondItem="nY9-69-9kU" secondAttribute="centerX" type="default" id="Dis-tM-bdp"/>
-                            <constraint firstItem="PEK-x6-bDi" firstAttribute="top" secondItem="nY9-69-9kU" secondAttribute="top" constant="159" id="M6H-Om-3e2"/>
-                            <constraint firstItem="PEK-x6-bDi" firstAttribute="leading" secondItem="nY9-69-9kU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="MbY-NM-ykl"/>
-                            <constraint firstItem="MQl-xL-JdD" firstAttribute="trailing" secondItem="PEK-x6-bDi" secondAttribute="trailing" type="default" id="SvK-zt-pXT"/>
-                            <constraint firstItem="LEu-TF-9Yp" firstAttribute="top" secondItem="nY9-69-9kU" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ZUS-ec-9b9"/>
-                            <constraint firstItem="oCV-2g-G55" firstAttribute="top" secondItem="nY9-69-9kU" secondAttribute="top" constant="92" id="Zmg-Gj-VIk"/>
-                            <constraint firstItem="oCV-2g-G55" firstAttribute="trailing" secondItem="PEK-x6-bDi" secondAttribute="trailing" type="default" id="fKl-bi-Btv"/>
-                            <constraint firstAttribute="bottom" secondItem="oBt-5q-RhH" secondAttribute="bottom" constant="236" id="kqK-mg-PgN"/>
-                            <constraint firstAttribute="bottom" secondItem="1fg-Wt-i38" secondAttribute="bottom" constant="137" id="mWf-uz-7Bq"/>
-                            <constraint firstItem="oBt-5q-RhH" firstAttribute="leading" secondItem="nY9-69-9kU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pZZ-kU-6ot"/>
-                            <constraint firstItem="LEu-TF-9Yp" firstAttribute="leading" secondItem="nY9-69-9kU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wbS-kA-ai0"/>
+                            <constraint firstItem="LEu-TF-9Yp" firstAttribute="leading" secondItem="oCV-2g-G55" secondAttribute="leading" type="user" id="4ha-Rq-1zA"/>
+                            <constraint firstItem="575-sC-Vq6" firstAttribute="leading" secondItem="oCV-2g-G55" secondAttribute="leading" type="default" id="6QY-mr-akf"/>
+                            <constraint firstItem="PEK-x6-bDi" firstAttribute="top" secondItem="575-sC-Vq6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6qz-ij-OWU"/>
+                            <constraint firstItem="MQl-xL-JdD" firstAttribute="trailing" secondItem="PEK-x6-bDi" secondAttribute="trailing" type="default" id="7Ve-ka-47a"/>
+                            <constraint firstItem="LEu-TF-9Yp" firstAttribute="leading" secondItem="oBt-5q-RhH" secondAttribute="leading" type="user" id="8Kp-C1-Pcw"/>
+                            <constraint firstItem="oBt-5q-RhH" firstAttribute="trailing" secondItem="hZK-GJ-DHD" secondAttribute="trailing" type="default" id="D7D-b0-Oud"/>
+                            <constraint firstItem="oCV-2g-G55" firstAttribute="trailing" secondItem="LEu-TF-9Yp" secondAttribute="trailing" type="default" id="L8Z-Lv-lB9"/>
+                            <constraint firstItem="LEu-TF-9Yp" firstAttribute="leading" secondItem="MQl-xL-JdD" secondAttribute="leading" type="user" id="OZh-Pz-VbW"/>
+                            <constraint firstItem="LEu-TF-9Yp" firstAttribute="leading" secondItem="lcb-YH-mlS" secondAttribute="leading" type="default" id="PLa-f7-Aen"/>
+                            <constraint firstItem="yBJ-or-AX2" firstAttribute="leading" secondItem="MQl-xL-JdD" secondAttribute="leading" type="default" id="R8C-bu-Jy7"/>
+                            <constraint firstItem="575-sC-Vq6" firstAttribute="top" secondItem="oCV-2g-G55" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="T9Z-PD-Plz"/>
+                            <constraint firstItem="MQl-xL-JdD" firstAttribute="leading" secondItem="Mfu-bg-XwO" secondAttribute="leading" type="default" id="WBP-KR-EFf"/>
+                            <constraint firstItem="yBJ-or-AX2" firstAttribute="top" secondItem="MQl-xL-JdD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Wqw-GB-fv4"/>
+                            <constraint firstItem="o0u-4A-VxQ" firstAttribute="top" secondItem="nY9-69-9kU" secondAttribute="top" constant="117" id="bkH-4d-n0G"/>
+                            <constraint firstItem="oCV-2g-G55" firstAttribute="top" secondItem="o0u-4A-VxQ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cXN-b1-C60"/>
+                            <constraint firstAttribute="bottom" secondItem="oBt-5q-RhH" secondAttribute="bottom" constant="73" id="dOk-eP-z6q"/>
+                            <constraint firstItem="1fg-Wt-i38" firstAttribute="top" secondItem="hZK-GJ-DHD" secondAttribute="top" type="default" id="eJV-TS-nbt"/>
+                            <constraint firstItem="PEK-x6-bDi" firstAttribute="trailing" secondItem="oCV-2g-G55" secondAttribute="trailing" type="default" id="f01-wC-cOv"/>
+                            <constraint firstAttribute="bottom" secondItem="1fg-Wt-i38" secondAttribute="bottom" constant="7" id="gqU-hn-Ue8"/>
+                            <constraint firstItem="LEu-TF-9Yp" firstAttribute="top" secondItem="nY9-69-9kU" secondAttribute="top" constant="70" id="hgV-Wf-ohu"/>
+                            <constraint firstItem="oBt-5q-RhH" firstAttribute="top" secondItem="yBJ-or-AX2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="liP-Qa-6Ui"/>
+                            <constraint firstItem="1fg-Wt-i38" firstAttribute="leading" secondItem="nY9-69-9kU" secondAttribute="leading" constant="56" id="ndB-NI-pcE"/>
+                            <constraint firstItem="LEu-TF-9Yp" firstAttribute="leading" secondItem="PEK-x6-bDi" secondAttribute="leading" type="user" id="oiF-o2-K99"/>
+                            <constraint firstItem="o0u-4A-VxQ" firstAttribute="leading" secondItem="oCV-2g-G55" secondAttribute="leading" type="default" id="r8L-V9-GFS"/>
+                            <constraint firstItem="MQl-xL-JdD" firstAttribute="top" secondItem="Mfu-bg-XwO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tna-Mc-19g"/>
+                            <constraint firstItem="oBt-5q-RhH" firstAttribute="centerX" secondItem="nY9-69-9kU" secondAttribute="centerX" type="default" id="whU-Qj-XnD"/>
+                            <constraint firstItem="MQl-xL-JdD" firstAttribute="trailing" secondItem="oBt-5q-RhH" secondAttribute="trailing" type="default" id="yaY-qy-gQ5"/>
+                            <constraint firstItem="lcb-YH-mlS" firstAttribute="top" secondItem="nY9-69-9kU" secondAttribute="top" constant="33" id="zAT-uT-D6F"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answer1Label" destination="o0u-4A-VxQ" id="Llg-aQ-5PC"/>
                         <outlet property="answer1TextField" destination="oCV-2g-G55" id="ISh-6k-S8M"/>
+                        <outlet property="answer2Label" destination="575-sC-Vq6" id="dCI-vh-2Fj"/>
                         <outlet property="answer2TextField" destination="PEK-x6-bDi" id="mc5-eh-wP6"/>
+                        <outlet property="answer3Label" destination="Mfu-bg-XwO" id="vHt-Xn-Ry9"/>
                         <outlet property="answer3TextField" destination="MQl-xL-JdD" id="Mtx-cQ-K3Q"/>
+                        <outlet property="answer4Label" destination="yBJ-or-AX2" id="oeQ-ko-NcU"/>
                         <outlet property="answer4TextField" destination="oBt-5q-RhH" id="2z9-rD-gnc"/>
+                        <outlet property="cancelButton" destination="hZK-GJ-DHD" id="rd4-6p-TmL"/>
+                        <outlet property="postButton" destination="1fg-Wt-i38" id="9iZ-4r-z9c"/>
+                        <outlet property="questionLabel" destination="lcb-YH-mlS" id="ZDs-Qz-fgD"/>
                         <outlet property="questionTextField" destination="LEu-TF-9Yp" id="XLf-70-wti"/>
                     </connections>
                 </viewController>
@@ -149,16 +211,26 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/JALFeedViewController.h"/>
             <relationships>
                 <relationship kind="action" name="addQuestion:"/>
+                <relationship kind="action" name="logOutSession:"/>
+                <relationship kind="action" name="toggleQuestions:"/>
             </relationships>
         </class>
         <class className="JALNewQuestionViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/JALNewQuestionViewController.h"/>
             <relationships>
                 <relationship kind="action" name="addButton:"/>
+                <relationship kind="action" name="cancelButton:"/>
+                <relationship kind="outlet" name="answer1Label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="answer1TextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="answer2Label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="answer2TextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="answer3Label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="answer3TextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="answer4Label" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="answer4TextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="cancelButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="postButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="questionTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
@@ -168,6 +240,7 @@
                 <relationship kind="action" name="goBackButton:"/>
                 <relationship kind="action" name="submitVote:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="answers" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
@@ -181,6 +254,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

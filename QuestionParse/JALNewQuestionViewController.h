@@ -15,4 +15,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *answer3TextField;
 @property (weak, nonatomic) IBOutlet UITextField *answer4TextField;
 - (IBAction)addButton:(id)sender;
+- (IBAction)cancelButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *answer1Label;
+@property (weak, nonatomic) IBOutlet UILabel *answer2Label;
+@property (weak, nonatomic) IBOutlet UILabel *answer3Label;
+@property (weak, nonatomic) IBOutlet UILabel *answer4Label;
+@property (weak, nonatomic) IBOutlet UIButton *postButton;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @end
