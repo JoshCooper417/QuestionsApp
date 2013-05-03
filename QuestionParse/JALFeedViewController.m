@@ -57,7 +57,7 @@
     currpath = self.tableView.indexPathForSelectedRow;
     
     PFObject* currquestion = [self objectAtIndexPath:currpath];
-    [detailVC setData:currquestion];
+    detailVC.currquestion = currquestion;
     [self presentViewController:detailVC animated:YES completion:nil];
 }
 

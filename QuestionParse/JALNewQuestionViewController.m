@@ -101,7 +101,11 @@
     else{
     [newquestion setObject: newquestionString forKey:@"questionString"];
     [newquestion setObject: answersFinal forKey:@"answerOptions"];
+    PFObject* user = [PFUser currentUser];
+    [user fetch];
+    [user addUniqueObject:newquestion forKey:@"MyQuestions"];
     [newquestion saveInBackground];
+    [user saveInBackground];
     [self dismissViewControllerAnimated: YES completion: nil];
     }
 }

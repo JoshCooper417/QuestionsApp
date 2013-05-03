@@ -13,5 +13,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 - (IBAction)goBackButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *answers;
--(void) setData:(PFObject *)currQuestion;
+@property(weak,nonatomic) PFObject* currquestion;
 @end
