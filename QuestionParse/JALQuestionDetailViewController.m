@@ -14,11 +14,20 @@
 
 @implementation JALQuestionDetailViewController
 
+NSString* questionLabelText;
+NSArray* answersArray;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-     self.questionLabel.text = self.questionLabelText;
+     self.questionLabel.text = questionLabelText;
+    NSMutableString* ansText = [[NSMutableString alloc] init];
+    for(PFObject* answer in answersArray){
+        [answer fetch];
+        NSString *answerString = [answer objectForKey:@"AnswerString"];
+        [ansText appendString:answerString];
+    }
+    self.answers.text=ansText;
 	// Do any additional setup after loading the view.
 }
 
@@ -32,9 +41,10 @@
     [self dismissViewControllerAnimated: YES completion: nil];
 }
 
--(void)setQuestionLabelText:(NSString *)questiontext
-{
-    _questionLabelText = questiontext;
+-(void) setData:(PFObject *)currquestion
+{ 
+    questionLabelText = [currquestion objectForKey:@"questionString"];
+    answersArray = [currquestion objectForKey:@"answerOptions"];
 }
 
 @end

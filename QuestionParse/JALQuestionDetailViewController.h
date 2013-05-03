@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface JALQuestionDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
-@property (strong, nonatomic) NSString* questionLabelText;
 - (IBAction)goBackButton:(id)sender;
--(void) setQuestionLabelText:(NSString *)questiontext;
+@property (weak, nonatomic) IBOutlet UILabel *answers;
+-(void) setData:(PFObject *)currQuestion;
 @end

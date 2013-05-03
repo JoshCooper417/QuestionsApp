@@ -10,11 +10,21 @@
 #import "JALQuestionDetailViewController.h"
 #import "JALNewQuestionViewController.h"
 
+
 @implementation JALFeedViewController
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+	
+  }
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
+    
+   
+    
     if (self)
     {
         self.parseClassName = @"Question";
@@ -47,9 +57,7 @@
     currpath = self.tableView.indexPathForSelectedRow;
     
     PFObject* currquestion = [self objectAtIndexPath:currpath];
-    NSString* question = [currquestion objectForKey:@"questionString"];
-
-    [detailVC setQuestionLabelText: question];
+    [detailVC setData:currquestion];
     [self presentViewController:detailVC animated:YES completion:nil];
 }
 
@@ -62,5 +70,7 @@
     [self presentViewController:newQuestionVC animated:YES completion:nil];
     
 }
+
+
 @end
 

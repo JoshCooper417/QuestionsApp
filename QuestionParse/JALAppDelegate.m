@@ -8,6 +8,7 @@
 
 #import "JALAppDelegate.h"
 #import "JALFeedViewController.h"
+#import "JALDefaultViewController.h"
 #import <Parse/Parse.h>
 
 @implementation JALAppDelegate
@@ -17,9 +18,13 @@
     [Parse setApplicationId:@"zwQDP97KvFipQFWvxwjpfc42HamEsB0ePPfIQRwG"
                   clientKey:@"N74qGOT5kpUrYvmSfuFI3bjAF5IuDoQp4nOp2Uwm"];
     
-    JALFeedViewController* controller= [[JALFeedViewController alloc]init];
+   JALDefaultViewController* loginController = [[JALDefaultViewController alloc] init];
     
-    self.window.rootViewController = controller;
+    
+    //JALFeedViewController* controller= [[JALFeedViewController alloc]init];
+    
+    self.window.rootViewController = loginController;
+    
     // Override point for customization after application launch.
     return YES;
 }

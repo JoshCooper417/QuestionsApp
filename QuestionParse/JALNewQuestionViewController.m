@@ -83,9 +83,12 @@
     NSMutableArray* answersFinal = [[NSMutableArray alloc] init];
     for(NSString* answer in answersInitial){
         if(answer.length>0){
-            [answersFinal addObject:answer];
+            PFObject* newAnswer = [[PFObject alloc]initWithClassName:@"Answer"];
+            [newAnswer setObject:answer forKey:@"AnswerString"];
+            [answersFinal addObject:newAnswer];
         }
     }
+    
     NSString* newquestionString = _questionTextField.text;
     if([answersFinal count]==0 || newquestionString.length ==0){
             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Uh oh"

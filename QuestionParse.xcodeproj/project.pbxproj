@@ -36,6 +36,13 @@
 		9C3597A5172440E700BF9169 /* JALFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3597A4172440E700BF9169 /* JALFeedViewController.m */; };
 		9C3597A8172447C500BF9169 /* JALQuestionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3597A7172447C500BF9169 /* JALQuestionDetailViewController.m */; };
 		9C50948C1724560400A1DB55 /* JALNewQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C50948B1724560400A1DB55 /* JALNewQuestionViewController.m */; };
+		C5F5E36C173331D200804BDD /* JALLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E36B173331D200804BDD /* JALLoginViewController.m */; };
+		C5F5E37117333A0800804BDD /* .localized in Resources */ = {isa = PBXBuildFile; fileRef = C5F5E36E17333A0800804BDD /* .localized */; };
+		C5F5E37217333A0800804BDD /* ParsePlatform-LoginAndSignUpTutorial-d53ca00.zip in Resources */ = {isa = PBXBuildFile; fileRef = C5F5E36F17333A0800804BDD /* ParsePlatform-LoginAndSignUpTutorial-d53ca00.zip */; };
+		C5F5E37317333A0800804BDD /* questionmark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5F5E37017333A0800804BDD /* questionmark.jpg */; };
+		C5F5E37517333A0900804BDD /* questionmark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C5F5E37417333A0800804BDD /* questionmark.jpg */; };
+		C5F5E37817333B2800804BDD /* JALSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E37717333B2700804BDD /* JALSignUpViewController.m */; };
+		C5F5E37B1733438500804BDD /* JALDefaultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F5E37A1733438500804BDD /* JALDefaultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +94,16 @@
 		9C3597A7172447C500BF9169 /* JALQuestionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALQuestionDetailViewController.m; sourceTree = "<group>"; };
 		9C50948A1724560400A1DB55 /* JALNewQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALNewQuestionViewController.h; sourceTree = "<group>"; };
 		9C50948B1724560400A1DB55 /* JALNewQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALNewQuestionViewController.m; sourceTree = "<group>"; };
+		C5F5E36A173331D200804BDD /* JALLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALLoginViewController.h; sourceTree = "<group>"; };
+		C5F5E36B173331D200804BDD /* JALLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALLoginViewController.m; sourceTree = "<group>"; };
+		C5F5E36E17333A0800804BDD /* .localized */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .localized; sourceTree = "<group>"; };
+		C5F5E36F17333A0800804BDD /* ParsePlatform-LoginAndSignUpTutorial-d53ca00.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ParsePlatform-LoginAndSignUpTutorial-d53ca00.zip"; sourceTree = "<group>"; };
+		C5F5E37017333A0800804BDD /* questionmark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = questionmark.jpg; sourceTree = "<group>"; };
+		C5F5E37417333A0800804BDD /* questionmark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = questionmark.jpg; sourceTree = "<group>"; };
+		C5F5E37617333B2700804BDD /* JALSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALSignUpViewController.h; sourceTree = "<group>"; };
+		C5F5E37717333B2700804BDD /* JALSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALSignUpViewController.m; sourceTree = "<group>"; };
+		C5F5E3791733438500804BDD /* JALDefaultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JALDefaultViewController.h; path = Downloads/JALDefaultViewController.h; sourceTree = "<group>"; };
+		C5F5E37A1733438500804BDD /* JALDefaultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JALDefaultViewController.m; path = Downloads/JALDefaultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +183,16 @@
 		9C35975A17243D8E00BF9169 /* QuestionParse */ = {
 			isa = PBXGroup;
 			children = (
+				C5F5E3791733438500804BDD /* JALDefaultViewController.h */,
+				C5F5E37A1733438500804BDD /* JALDefaultViewController.m */,
 				9C35976317243D8E00BF9169 /* JALAppDelegate.h */,
 				9C35976417243D8E00BF9169 /* JALAppDelegate.m */,
+				C5F5E37617333B2700804BDD /* JALSignUpViewController.h */,
+				C5F5E37717333B2700804BDD /* JALSignUpViewController.m */,
+				C5F5E36A173331D200804BDD /* JALLoginViewController.h */,
+				C5F5E36B173331D200804BDD /* JALLoginViewController.m */,
+				C5F5E37417333A0800804BDD /* questionmark.jpg */,
+				C5F5E36D17333A0800804BDD /* Downloads */,
 				9C3597A3172440E700BF9169 /* JALFeedViewController.h */,
 				9C3597A4172440E700BF9169 /* JALFeedViewController.m */,
 				9C35976C17243D8E00BF9169 /* MainStoryboard.storyboard */,
@@ -213,6 +238,16 @@
 				9C35978117243D8E00BF9169 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5F5E36D17333A0800804BDD /* Downloads */ = {
+			isa = PBXGroup;
+			children = (
+				C5F5E36E17333A0800804BDD /* .localized */,
+				C5F5E36F17333A0800804BDD /* ParsePlatform-LoginAndSignUpTutorial-d53ca00.zip */,
+				C5F5E37017333A0800804BDD /* questionmark.jpg */,
+			);
+			path = Downloads;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +327,10 @@
 				9C35976917243D8E00BF9169 /* Default@2x.png in Resources */,
 				9C35976B17243D8E00BF9169 /* Default-568h@2x.png in Resources */,
 				9C35976E17243D8E00BF9169 /* MainStoryboard.storyboard in Resources */,
+				C5F5E37117333A0800804BDD /* .localized in Resources */,
+				C5F5E37217333A0800804BDD /* ParsePlatform-LoginAndSignUpTutorial-d53ca00.zip in Resources */,
+				C5F5E37317333A0800804BDD /* questionmark.jpg in Resources */,
+				C5F5E37517333A0900804BDD /* questionmark.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +371,9 @@
 				9C3597A5172440E700BF9169 /* JALFeedViewController.m in Sources */,
 				9C3597A8172447C500BF9169 /* JALQuestionDetailViewController.m in Sources */,
 				9C50948C1724560400A1DB55 /* JALNewQuestionViewController.m in Sources */,
+				C5F5E36C173331D200804BDD /* JALLoginViewController.m in Sources */,
+				C5F5E37817333B2800804BDD /* JALSignUpViewController.m in Sources */,
+				C5F5E37B1733438500804BDD /* JALDefaultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
