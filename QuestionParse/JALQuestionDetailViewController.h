@@ -11,6 +11,7 @@
 
 @interface JALQuestionDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+
 - (IBAction)goBackButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *answers;
 @property(weak,nonatomic) PFObject* currquestion;
