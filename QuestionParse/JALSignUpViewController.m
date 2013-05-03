@@ -20,10 +20,10 @@
     [super viewDidLoad];
     // customize the view
     [self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"quest.png"]]];
-    [self.signUpView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"signupback.png"]]];
+    [self.signUpView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     [self.signUpView.signUpButton setImage:nil forState:UIControlStateNormal];
     [self.signUpView.signUpButton setImage:nil forState:UIControlStateHighlighted];
-    [self.signUpView.signUpButton  setBackgroundImage:[UIImage imageNamed: @"signuputton.png"] forState:UIControlStateHighlighted];
+    [self.signUpView.signUpButton  setBackgroundImage:[UIImage imageNamed: @"signupbuttondown.png"] forState:UIControlStateHighlighted];
     [self.signUpView.signUpButton  setBackgroundImage:[UIImage imageNamed: @"signupbuttondown.png"] forState:UIControlStateHighlighted];
     
     [self.signUpView.signUpButton  setTitle:@"" forState:UIControlStateNormal];

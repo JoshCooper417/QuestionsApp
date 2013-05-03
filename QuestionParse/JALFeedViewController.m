@@ -40,10 +40,7 @@ BOOL showAllQuestions = true;
         self.tableView.tableFooterView = footer;
         
     
-        
-        UIImageView* logo = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"smalllogo.png"]];
-        [header addSubview:logo];
-        self.tableView.tableHeaderView = header;
+    
         
         // add button for adding new questions to the view
         UIButton *addQuestionButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];

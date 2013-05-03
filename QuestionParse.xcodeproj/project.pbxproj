@@ -42,6 +42,8 @@
 		9C3597A8172447C500BF9169 /* JALQuestionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3597A7172447C500BF9169 /* JALQuestionDetailViewController.m */; };
 		9C50948C1724560400A1DB55 /* JALNewQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C50948B1724560400A1DB55 /* JALNewQuestionViewController.m */; };
 		9C8A76F21733DDFB0029B77B /* smalllogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A76F11733DDFB0029B77B /* smalllogo.png */; };
+		9C8A76F41733E8180029B77B /* qmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A76F31733E8180029B77B /* qmark.png */; };
+		9C8A76F61733E88D0029B77B /* qmarkcircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A76F51733E88D0029B77B /* qmarkcircle.png */; };
 		9C91F86C1733AC9700ECDF8C /* loginbuttondown.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C91F86B1733AC9700ECDF8C /* loginbuttondown.png */; };
 		9C91F86F1733B59500ECDF8C /* signupbuttondown.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C91F86D1733B59500ECDF8C /* signupbuttondown.png */; };
 		9C91F8701733B59500ECDF8C /* signupbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C91F86E1733B59500ECDF8C /* signupbutton.png */; };
@@ -115,6 +117,8 @@
 		9C50948A1724560400A1DB55 /* JALNewQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALNewQuestionViewController.h; sourceTree = "<group>"; };
 		9C50948B1724560400A1DB55 /* JALNewQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALNewQuestionViewController.m; sourceTree = "<group>"; };
 		9C8A76F11733DDFB0029B77B /* smalllogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smalllogo.png; sourceTree = "<group>"; };
+		9C8A76F31733E8180029B77B /* qmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = qmark.png; path = QuestionParse/qmark.png; sourceTree = "<group>"; };
+		9C8A76F51733E88D0029B77B /* qmarkcircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qmarkcircle.png; sourceTree = "<group>"; };
 		9C91F86B1733AC9700ECDF8C /* loginbuttondown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginbuttondown.png; sourceTree = "<group>"; };
 		9C91F86D1733B59500ECDF8C /* signupbuttondown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signupbuttondown.png; path = QuestionParse/signupbuttondown.png; sourceTree = "<group>"; };
 		9C91F86E1733B59500ECDF8C /* signupbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signupbutton.png; path = QuestionParse/signupbutton.png; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 		9C35974817243D8E00BF9169 = {
 			isa = PBXGroup;
 			children = (
+				9C8A76F31733E8180029B77B /* qmark.png */,
 				9C91F86D1733B59500ECDF8C /* signupbuttondown.png */,
 				9C91F86E1733B59500ECDF8C /* signupbutton.png */,
 				9C1D70B517339AC400E6D2E3 /* quest.png */,
@@ -224,17 +229,18 @@
 				C5F5E37617333B2700804BDD /* JALSignUpViewController.h */,
 				C5F5E37717333B2700804BDD /* JALSignUpViewController.m */,
 				9C1D70B717339F4800E6D2E3 /* background.png */,
+				9C8A76F51733E88D0029B77B /* qmarkcircle.png */,
 				C5F5E36A173331D200804BDD /* JALLoginViewController.h */,
 				C5F5E36B173331D200804BDD /* JALLoginViewController.m */,
 				9C91F86B1733AC9700ECDF8C /* loginbuttondown.png */,
 				9C1D70C11733AAEA00E6D2E3 /* loginbutton.png */,
+				C5F5E37417333A0800804BDD /* questionmark.jpg */,
+				9C3597A4172440E700BF9169 /* JALFeedViewController.m */,
 				9C1D70BF1733A8E800E6D2E3 /* signupback.png */,
 				9C1D70BA1733A21800E6D2E3 /* loginback.png */,
-				C5F5E37417333A0800804BDD /* questionmark.jpg */,
 				9C91F8751733C30500ECDF8C /* Avenir.ttc */,
 				9C91F8731733C1AF00ECDF8C /* cancelbutton.png */,
 				9C3597A3172440E700BF9169 /* JALFeedViewController.h */,
-				9C3597A4172440E700BF9169 /* JALFeedViewController.m */,
 				9C8A76F11733DDFB0029B77B /* smalllogo.png */,
 				9C91F87B1733C78E00ECDF8C /* allquestions.png */,
 				9C91F87C1733C78E00ECDF8C /* myquestions.png */,
@@ -383,6 +389,8 @@
 				9C91F8801733C8AB00ECDF8C /* votebackground.png in Resources */,
 				9C91F8821733C96A00ECDF8C /* backbutton.png in Resources */,
 				9C8A76F21733DDFB0029B77B /* smalllogo.png in Resources */,
+				9C8A76F41733E8180029B77B /* qmark.png in Resources */,
+				9C8A76F61733E88D0029B77B /* qmarkcircle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

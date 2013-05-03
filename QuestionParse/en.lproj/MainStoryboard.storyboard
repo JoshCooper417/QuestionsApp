@@ -42,7 +42,11 @@
                                     <action selector="goBackButton:" destination="YHr-yb-Vjk" eventType="touchUpInside" id="b1t-Fd-Fix"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCV-Df-gYL">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCV-Df-gYL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="mW0-ry-9nM"/>
+                                    <constraint firstAttribute="width" constant="198" id="zAw-dy-ORa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -50,10 +54,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0fR-Jf-zH1" secondAttribute="trailing" constant="11" id="Ifi-f2-q5V"/>
                             <constraint firstItem="yCV-Df-gYL" firstAttribute="top" secondItem="ncI-3x-AcZ" secondAttribute="top" constant="96" id="L9j-bf-Un3"/>
                             <constraint firstAttribute="bottom" secondItem="0fR-Jf-zH1" secondAttribute="bottom" constant="10" id="Nix-Hn-xLe"/>
-                            <constraint firstItem="yCV-Df-gYL" firstAttribute="centerX" secondItem="ncI-3x-AcZ" secondAttribute="centerX" type="default" id="kdF-9c-Hig"/>
-                            <constraint firstAttribute="trailing" secondItem="0fR-Jf-zH1" secondAttribute="trailing" constant="11" id="zcx-Y4-cQQ"/>
+                            <constraint firstItem="yCV-Df-gYL" firstAttribute="leading" secondItem="ncI-3x-AcZ" secondAttribute="leading" constant="70" id="SeA-rD-BAU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -238,7 +242,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/JALQuestionDetailViewController.h"/>
             <relationships>
                 <relationship kind="action" name="goBackButton:"/>
-                <relationship kind="action" name="submitVote:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="answers" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="questionLabel" candidateClass="UILabel"/>

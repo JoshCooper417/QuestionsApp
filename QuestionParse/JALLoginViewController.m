@@ -21,13 +21,13 @@
     [super viewDidLoad];
     // customize the view
     [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"quest.png"]]];
-        [self.logInView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"loginback.png"]]];
+        [self.logInView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     
     // login buttin
     [self.logInView.logInButton setImage:nil forState:UIControlStateNormal];
     [self.logInView.logInButton setImage:nil forState:UIControlStateHighlighted];
     [self.logInView.logInButton setBackgroundImage:[UIImage imageNamed: @"loginbutton.png"] forState:UIControlStateHighlighted];
-     [self.logInView.logInButton setBackgroundImage:[UIImage imageNamed: @"loginbuttondown.png"] forState:UIControlStateHighlighted];
+     [self.logInView.logInButton setBackgroundImage:[UIImage imageNamed: @"loginbutton.png"] forState:UIControlStateHighlighted];
     
 [self.logInView.logInButton setTitle:@"" forState:UIControlStateNormal];
     [self.logInView.logInButton setTitle:@"" forState:UIControlStateHighlighted];

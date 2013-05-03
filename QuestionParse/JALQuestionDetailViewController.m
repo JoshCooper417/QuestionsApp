@@ -92,7 +92,7 @@ NSArray* answersArray;
             
             // add associated answer labels
             NSString* answerText = [answer objectForKey:@"AnswerString"];
-            UILabel* answerLabel = [[UILabel alloc]initWithFrame:CGRectMake((60.0 + leftoffset), (160.0 + offset), 120.0, 30.0)];
+            UILabel* answerLabel = [[UILabel alloc]initWithFrame:CGRectMake((60.0 + leftoffset), (160.0 + offset), 320.0, 30.0)];
             answerLabel.text = answerText;
             [answerLabel setBackgroundColor:[UIColor clearColor]];
              answerLabel.font = [UIFont fontWithName:@"Avenir" size:20];
