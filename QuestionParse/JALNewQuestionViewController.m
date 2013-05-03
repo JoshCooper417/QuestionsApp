@@ -99,11 +99,15 @@
             [message show];
     }
     else{
-    [newquestion setObject: newquestionString forKey:@"questionString"];
+   
     [newquestion setObject: answersFinal forKey:@"answerOptions"];
     PFObject* user = [PFUser currentUser];
     [user fetch];
+        NSString* userId = user.objectId;
     [user addUniqueObject:newquestion forKey:@"MyQuestions"];
+    [newquestion setObject:userId forKey:@"questionUser"];
+    [newquestion setObject: newquestionString forKey:@"questionString"];
+    
     [newquestion saveInBackground];
     [user saveInBackground];
     [self dismissViewControllerAnimated: YES completion: nil];

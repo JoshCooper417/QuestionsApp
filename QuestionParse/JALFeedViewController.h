@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface JALFeedViewController : PFQueryTableViewController - (IBAction)addQuestion:(id)sender;
+@interface JALFeedViewController : PFQueryTableViewController
 
+- (IBAction)addQuestion:(id)sender;
+@property (weak, nonatomic) UIButton* myQuestions;
 @end

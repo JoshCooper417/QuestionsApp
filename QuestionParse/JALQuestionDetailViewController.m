@@ -7,7 +7,6 @@
 //
 
 #import "JALQuestionDetailViewController.h"
-#import "JALVoteButton.h"
 
 @interface JALQuestionDetailViewController ()
 
@@ -89,6 +88,7 @@ NSArray* answersArray;
 
 -(IBAction) submitVote:(UIButton*) sender {
     NSInteger index = [sender.titleLabel.text integerValue];
+    index = index -1; // 1-based for display
     PFObject* vote = [answersArray objectAtIndex:index];
     NSString* myId = [PFUser currentUser].objectId;
     [vote addUniqueObject:myId forKey:@"Voters"];

@@ -20,9 +20,6 @@
     
    JALDefaultViewController* loginController = [[JALDefaultViewController alloc] init];
     
-    
-    //JALFeedViewController* controller= [[JALFeedViewController alloc]init];
-    
     self.window.rootViewController = loginController;
     
     // Override point for customization after application launch.
