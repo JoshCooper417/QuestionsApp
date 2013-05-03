@@ -38,8 +38,11 @@
     //signup button
     [self.logInView.signUpButton setImage:nil forState:UIControlStateNormal];
     [self.logInView.signUpButton setImage:nil forState:UIControlStateHighlighted];
-    [self.logInView.signUpButton  setBackgroundImage:[UIImage imageNamed: @"signuputton.png"] forState:UIControlStateHighlighted];
-    [self.logInView.signUpButton  setBackgroundImage:[UIImage imageNamed: @"signupbuttondown.png"] forState:UIControlStateHighlighted];
+    [self.logInView.signUpButton  setBackgroundImage:[UIImage imageNamed: @"signupbutton.png"] forState:UIControlStateNormal];
+    [self.logInView.signUpButton  setBackgroundImage:[UIImage imageNamed: @"signupbutton.png"] forState:UIControlStateHighlighted];
+    
+    [self.logInView.usernameField setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]];
+      [self.logInView.passwordField setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]];
     
     [self.logInView.signUpButton  setTitle:@"" forState:UIControlStateNormal];
     [self.logInView.signUpButton  setTitle:@"" forState:UIControlStateHighlighted];

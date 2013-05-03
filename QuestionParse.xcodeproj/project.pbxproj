@@ -49,7 +49,6 @@
 		9C91F8701733B59500ECDF8C /* signupbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C91F86E1733B59500ECDF8C /* signupbutton.png */; };
 		9C91F8721733BE8C00ECDF8C /* postbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C91F8711733BE8C00ECDF8C /* postbutton.png */; };
 		9C91F8741733C1AF00ECDF8C /* cancelbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C91F8731733C1AF00ECDF8C /* cancelbutton.png */; };
-		9C91F8761733C30500ECDF8C /* Avenir.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 9C91F8751733C30500ECDF8C /* Avenir.ttc */; };
 		9C91F8781733C65E00ECDF8C /* addquestion.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C91F8771733C65E00ECDF8C /* addquestion.png */; };
 		9C91F87A1733C6FD00ECDF8C /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C91F8791733C6FD00ECDF8C /* logout.png */; };
 		9C91F87D1733C78F00ECDF8C /* allquestions.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C91F87B1733C78E00ECDF8C /* allquestions.png */; };
@@ -73,7 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9C1D70B517339AC400E6D2E3 /* quest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest.png; sourceTree = "<group>"; };
+		9C1D70B517339AC400E6D2E3 /* quest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quest.png; path = QuestionParse/quest.png; sourceTree = "<group>"; };
 		9C1D70B717339F4800E6D2E3 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		9C1D70BA1733A21800E6D2E3 /* loginback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginback.png; sourceTree = "<group>"; };
 		9C1D70BF1733A8E800E6D2E3 /* signupback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signupback.png; sourceTree = "<group>"; };
@@ -117,14 +116,13 @@
 		9C50948A1724560400A1DB55 /* JALNewQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JALNewQuestionViewController.h; sourceTree = "<group>"; };
 		9C50948B1724560400A1DB55 /* JALNewQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JALNewQuestionViewController.m; sourceTree = "<group>"; };
 		9C8A76F11733DDFB0029B77B /* smalllogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smalllogo.png; sourceTree = "<group>"; };
-		9C8A76F31733E8180029B77B /* qmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qmark.png; sourceTree = "<group>"; };
+		9C8A76F31733E8180029B77B /* qmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = qmark.png; path = QuestionParse/qmark.png; sourceTree = "<group>"; };
 		9C8A76F51733E88D0029B77B /* qmarkcircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qmarkcircle.png; sourceTree = "<group>"; };
 		9C91F86B1733AC9700ECDF8C /* loginbuttondown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginbuttondown.png; sourceTree = "<group>"; };
-		9C91F86D1733B59500ECDF8C /* signupbuttondown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signupbuttondown.png; sourceTree = "<group>"; };
-		9C91F86E1733B59500ECDF8C /* signupbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signupbutton.png; sourceTree = "<group>"; };
+		9C91F86D1733B59500ECDF8C /* signupbuttondown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signupbuttondown.png; path = QuestionParse/signupbuttondown.png; sourceTree = "<group>"; };
+		9C91F86E1733B59500ECDF8C /* signupbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signupbutton.png; path = QuestionParse/signupbutton.png; sourceTree = "<group>"; };
 		9C91F8711733BE8C00ECDF8C /* postbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = postbutton.png; sourceTree = "<group>"; };
 		9C91F8731733C1AF00ECDF8C /* cancelbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelbutton.png; sourceTree = "<group>"; };
-		9C91F8751733C30500ECDF8C /* Avenir.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = Avenir.ttc; path = ../../../Notes/Notes/Avenir.ttc; sourceTree = "<group>"; };
 		9C91F8771733C65E00ECDF8C /* addquestion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addquestion.png; sourceTree = "<group>"; };
 		9C91F8791733C6FD00ECDF8C /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 		9C91F87B1733C78E00ECDF8C /* allquestions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allquestions.png; sourceTree = "<group>"; };
@@ -177,6 +175,10 @@
 		9C35974817243D8E00BF9169 = {
 			isa = PBXGroup;
 			children = (
+				9C8A76F31733E8180029B77B /* qmark.png */,
+				9C91F86D1733B59500ECDF8C /* signupbuttondown.png */,
+				9C91F86E1733B59500ECDF8C /* signupbutton.png */,
+				9C1D70B517339AC400E6D2E3 /* quest.png */,
 				9C3597A117243E2800BF9169 /* SystemConfiguration.framework */,
 				9C35979F17243E2100BF9169 /* StoreKit.framework */,
 				9C35979D17243E1A00BF9169 /* Security.framework */,
@@ -217,10 +219,6 @@
 		9C35975A17243D8E00BF9169 /* QuestionParse */ = {
 			isa = PBXGroup;
 			children = (
-				9C8A76F31733E8180029B77B /* qmark.png */,
-				9C1D70B517339AC400E6D2E3 /* quest.png */,
-				9C91F86D1733B59500ECDF8C /* signupbuttondown.png */,
-				9C91F86E1733B59500ECDF8C /* signupbutton.png */,
 				C5F5E3791733438500804BDD /* JALDefaultViewController.h */,
 				C5F5E37A1733438500804BDD /* JALDefaultViewController.m */,
 				9C35976317243D8E00BF9169 /* JALAppDelegate.h */,
@@ -238,7 +236,6 @@
 				9C3597A4172440E700BF9169 /* JALFeedViewController.m */,
 				9C1D70BF1733A8E800E6D2E3 /* signupback.png */,
 				9C1D70BA1733A21800E6D2E3 /* loginback.png */,
-				9C91F8751733C30500ECDF8C /* Avenir.ttc */,
 				9C91F8731733C1AF00ECDF8C /* cancelbutton.png */,
 				9C3597A3172440E700BF9169 /* JALFeedViewController.h */,
 				9C8A76F11733DDFB0029B77B /* smalllogo.png */,
@@ -381,7 +378,6 @@
 				9C91F8701733B59500ECDF8C /* signupbutton.png in Resources */,
 				9C91F8721733BE8C00ECDF8C /* postbutton.png in Resources */,
 				9C91F8741733C1AF00ECDF8C /* cancelbutton.png in Resources */,
-				9C91F8761733C30500ECDF8C /* Avenir.ttc in Resources */,
 				9C91F8781733C65E00ECDF8C /* addquestion.png in Resources */,
 				9C91F87A1733C6FD00ECDF8C /* logout.png in Resources */,
 				9C91F87D1733C78F00ECDF8C /* allquestions.png in Resources */,

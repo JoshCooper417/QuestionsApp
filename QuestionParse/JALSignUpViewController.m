@@ -23,8 +23,13 @@
     [self.signUpView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     [self.signUpView.signUpButton setImage:nil forState:UIControlStateNormal];
     [self.signUpView.signUpButton setImage:nil forState:UIControlStateHighlighted];
+    [self.signUpView.signUpButton  setBackgroundImage:[UIImage imageNamed: @"signupbuttondown.png"] forState:UIControlStateNormal];
     [self.signUpView.signUpButton  setBackgroundImage:[UIImage imageNamed: @"signupbuttondown.png"] forState:UIControlStateHighlighted];
-    [self.signUpView.signUpButton  setBackgroundImage:[UIImage imageNamed: @"signupbuttondown.png"] forState:UIControlStateHighlighted];
+    
+    
+    [self.signUpView.usernameField setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]];
+    [self.signUpView.passwordField setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]];
+     [self.signUpView.emailField setTextColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]];
     
     [self.signUpView.signUpButton  setTitle:@"" forState:UIControlStateNormal];
     [self.signUpView.signUpButton  setTitle:@"" forState:UIControlStateHighlighted];
