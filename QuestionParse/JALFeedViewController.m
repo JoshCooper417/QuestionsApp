@@ -28,15 +28,18 @@ BOOL showAllQuestions = true;
         self.parseClassName = @"Question";
         self.textKey = @"questionString";
         
+        
         // adjust size of table view
+        UIView* header = [[UIView alloc]initWithFrame:CGRectMake(0,0,320,40)];
+        
         CGRect tableviewrect= CGRectMake(0,50,320,200);
         [self.tableView setFrame:tableviewrect];
         
         // create frame for footer
-        UIView* footer = [[UIView alloc]initWithFrame:CGRectMake(0, 250, 320, 100)];
+        UIView* footer = [[UIView alloc]initWithFrame:CGRectMake(0, 250, 320, 170)];
         self.tableView.tableFooterView = footer;
         
-        UIView* header = [[UIView alloc]initWithFrame:CGRectMake(80,0,320,40)];
+    
         
         UIImageView* logo = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"smalllogo.png"]];
         [header addSubview:logo];
@@ -62,8 +65,11 @@ BOOL showAllQuestions = true;
         [logOut addTarget:self
                               action:@selector(logOutSession:)
                     forControlEvents:UIControlEventTouchDown];
-        logOut.frame = CGRectMake(80.0, 70.0, 160.0, 40.0);
-            [self.tableView.tableFooterView addSubview:logOut];
+//        logOut.frame = CGRectMake(80.0, 70.0, 160.0, 40.0);
+        
+        logOut.frame = CGRectMake(80.0, 120, 160.0, 40.0);
+
+        [self.tableView.tableFooterView addSubview:logOut];
         
         // add button to filter to my questions
         self.myQuestions = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -71,9 +77,9 @@ BOOL showAllQuestions = true;
         [self.myQuestions addTarget:self
                    action:@selector(toggleQuestions:)
          forControlEvents:UIControlEventTouchDown];
-        self.myQuestions.frame = CGRectMake(80.0, 120, 160.0, 40.0);
+//        self.myQuestions.frame = CGRectMake(80.0, 120, 160.0, 40.0);
 
-//        self.myQuestions.frame = CGRectMake(80.0, 70.0, 160.0, 40.0);
+        self.myQuestions.frame = CGRectMake(80.0, 70.0, 160.0, 40.0);
         [self.tableView.tableFooterView addSubview:self.myQuestions];
         
     }
@@ -153,23 +159,23 @@ BOOL showAllQuestions = true;
 }
 
 
-//- (PFTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
-//
-//{
-//    static NSString* CellIdentifier = @"Cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    if (cell == nil)
-//    {
-//        cell = [[UITableViewCell alloc]init];
-//    }
-//    
-//    cell.textLabel.text = [object objectForKey:@"questionString"];
-//    cell.textLabel.font = [UIFont fontWithName:@"Avenir" size:20];
-//    
-//    cell.textLabel.textColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1];
-//    
-//    return cell;
-//}
+- (PFTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
+
+{
+    static NSString* CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc]init];
+    }
+    
+    cell.textLabel.text = [object objectForKey:@"questionString"];
+    cell.textLabel.font = [UIFont fontWithName:@"Avenir" size:20];
+    
+    cell.textLabel.textColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1];
+    
+    return cell;
+}
 
 @end
 
